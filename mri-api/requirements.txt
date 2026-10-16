@@ -1,0 +1,12 @@
+# No xgboost/scikit-learn/pandas here — this service only serves the ONNX CNN
+# model. See ../clinical-api/requirements.txt for the clinical-data service.
+# This is also what removes xgboost's two wildly different wheel sizes (4MB vs
+# 147MB, platform-dependent) from this service's deployment-size budget entirely.
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+onnxruntime==1.23.2
+pillow==10.2.0
+python-multipart==0.0.9
+pyjwt==2.10.1
+python-dotenv==1.0.1
